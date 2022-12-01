@@ -19,20 +19,20 @@ fun CommonLogger.log(severity: LogSeverity, eventId: EventId, data: Any, excepti
 		metadata,
 	))
 
-fun CommonLogger.logTrace(eventId: EventId, data: Any, exception: Throwable? = null, metadata: MutableMap<String, Any>) =
+fun CommonLogger.logTrace(eventId: EventId, data: Any, exception: Throwable? = null, metadata: MutableMap<String, Any> = HashMap()) =
 	log(trace, eventId, data, exception, metadata)
 
-fun CommonLogger.logDebug(eventId: EventId, data: Any, exception: Throwable? = null, metadata: MutableMap<String, Any>) =
+fun CommonLogger.logDebug(eventId: EventId, data: Any, exception: Throwable? = null, metadata: MutableMap<String, Any> = HashMap()) =
 	log(debug, eventId, data, exception, metadata)
 
-fun CommonLogger.logInformation(eventId: EventId, data: Any, exception: Throwable? = null, metadata: MutableMap<String, Any>) =
+fun CommonLogger.logInformation(eventId: EventId, data: Any, exception: Throwable? = null, metadata: MutableMap<String, Any> = HashMap()) =
 	log(information, eventId, data, exception, metadata)
 
-fun CommonLogger.logWarning(eventId: EventId, data: Any, exception: Throwable? = null, metadata: MutableMap<String, Any>) =
+fun CommonLogger.logWarning(eventId: EventId, data: Any, exception: Throwable? = null, metadata: MutableMap<String, Any> = HashMap()) =
 	log(warning, eventId, data, exception, metadata)
 
-fun CommonLogger.logError(eventId: EventId, data: Any, exception: Throwable?, metadata: MutableMap<String, Any>) =
+fun CommonLogger.logError(eventId: EventId, data: Any, exception: Throwable?, metadata: MutableMap<String, Any> = HashMap()) =
 	log(error, eventId, data, exception, metadata)
 
-fun CommonLogger.logCritical(eventId: EventId, data: Any, exception: Throwable?, metadata: MutableMap<String, Any>) =
+fun CommonLogger.logCritical(eventId: EventId, data: Any, exception: Throwable?, metadata: MutableMap<String, Any> = HashMap()) =
 	log(critical, eventId, data, exception, metadata)
